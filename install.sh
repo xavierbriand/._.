@@ -39,3 +39,22 @@ curl -fLo ~/.vim/autoload/plug.vim --progress --create-dirs https://raw.githubus
 ln -sfn ~/._./vimrc ~/.vimrc
 mkdir -p ~/.vim/backupdir
 mkdir -p ~/.vim/undodir
+
+# git
+
+git config --global core.eol text
+git config --global core.excludesfile ~/._./gitignore
+git config --global core.whitespace trailing-space,space-before-tab,tab-in-indent
+git config --global core.editor vim
+
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto
+git config --global color.grep auto
+
+git config --global merge.tool vimdiff
+git config --global pull.rebase true
+git config --global status.showUntrackedFiles all
+git config --global push.default matching
+
