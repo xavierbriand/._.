@@ -6,7 +6,6 @@ else
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
     ~/.bash_it/install.sh --silent
 fi
-
 case $OSTYPE in
     darwin*)
         CONFIG_FILE=.bash_profile
@@ -33,3 +32,10 @@ else
 fi
 
 ln -sfn ~/._./tmux.conf ~/.tmux.conf
+
+# vim
+
+curl -fLo ~/.vim/autoload/plug.vim --progress --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -sfn ~/._./vimrc ~/.vimrc
+mkdir -p ~/.vim/backupdir
+mkdir -p ~/.vim/undodir
