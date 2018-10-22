@@ -14,7 +14,7 @@ case $OSTYPE in
         ;;
 esac
 
-sed -i ''  "s/BASH_IT_THEME='bobby'/BASH_IT_THEME='powerline-multiline'/" ~/$CONFIG_FILE
+sed -i '' "s/BASH_IT_THEME='bobby'/BASH_IT_THEME='powerline-multiline'/" ~/$CONFIG_FILE
 
 grep 'EDITOR' ~/$CONFIG_FILE || echo 'export EDITOR=vim' >> ~/$CONFIG_FILE
 
