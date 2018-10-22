@@ -3,7 +3,19 @@ if [ ! -d ~/.bash_it ]; then
     ~/.bash_it/install.sh --silent
 fi
 
-sed -i ''  "s/BASH_IT_THEME='bobby'/BASH_IT_THEME='powerline-multiline'/" ~/.bash_profile
+case $OSTYPE in
+    darwin*)
+        CONFIG_FILE=.bash_profile
+        ;;
+    *)
+        CONFIG_FILE=.bashrc
+        ;;
+esac
 
-grep 'EDITOR' ~/.bash_profile            || echo 'export EDITOR=vim' >> ~/.bash_profile
-grep 'source ~/\.bashrc' ~/.bash_profile || echo 'if [ -f ~/.bashrc ]; then source ~/.bashrc; fi' >> ~/.bash_profile
+sed -i ''  "s/BASH_IT_THEME='bobby'/BASH_IT_THEME='powerline-multiline'/" ~/$CONFIG_FILE
+
+grep 'EDITOR' ~/$CONFIG_FILE || echo 'export EDITOR=vim' >> ~/$CONFIG_FILE
+
+if [[ $OSTYPE == darwin* ]]; then
+    grep 'source ~/\.bashrc' ~/.bash_profile || echo 'if [ -f ~/.bashrc ]; then source ~/.bashrc; fi' >> ~/.bash_profile
+fi
