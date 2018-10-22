@@ -4,6 +4,7 @@ Speed setup of my bash env using:
 
 - [bash-it](https://github.com/Bash-it/bash-it)
 - [iTerm Material Desgin color scheme](https://github.com/MartinSeeler/iterm2-material-design)
+- [Powerline fonts](https://github.com/powerline/fonts)
 
 ## How to use
 
