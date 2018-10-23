@@ -1,0 +1,14 @@
+stages:
+  - build
+
+bash_3-2:
+  stage: build
+  services:
+    - bash:3.2
+  script: './install.sh'
+
+bash_4-3:
+  stage: build
+  services:
+    - bash:4.3
+  script: './install.sh'
