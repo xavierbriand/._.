@@ -19,9 +19,13 @@ sed -i '' "s/BASH_IT_THEME='bobby'/BASH_IT_THEME='powerline-multiline'/" ~/$CONF
 
 grep 'EDITOR' ~/$CONFIG_FILE || echo 'export EDITOR=vim' >> ~/$CONFIG_FILE
 
-if [[ $OSTYPE == darwin* ]]; then
-    grep 'source ~/\.bashrc' ~/.bash_profile || echo 'if [ -f ~/.bashrc ]; then source ~/.bashrc; fi' >> ~/.bash_profile
-fi
+case $OSTYPE in
+    darwin* | freebsd*)
+        touch ~/.bash_profile
+        grep 'source ~/\.bashrc' ~/.bash_profile || echo 'if [ -f ~/.bashrc ]; then source ~/.bashrc; fi' >> ~/.bash_profile
+        ;;
+    freebsd*)
+esac
 
 # tmux
 
