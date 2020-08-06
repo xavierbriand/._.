@@ -39,11 +39,13 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('yaml', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('xml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('dist', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('html', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('twig', 'Magenta', 'none', '#ff00ff', '#151515')
 
 let NERDTreeWinPos='right'                                "NERDTree window to the right
 let NERDTreeAutoDeleteBuffer=1                            "Delete old buffer when renaming or moving a file
@@ -90,13 +92,19 @@ noremap <F3> :! exctags -R --fields=+aimS --languages=php --exclude="cache" .<CR
 " Twig
 
 "" syntax highlight for html.twig
-autocmd BufNewFile,BufRead  *.html.twig setlocal syntax=htmljinja
+autocmd BufNewFile,BufRead  *.html.twig setlocal syntax=jinja
 "" syntax highlight for xml.twig
-autocmd BufNewFile,BufRead  *.xml.twig setlocal syntax=htmljinja
+autocmd BufNewFile,BufRead  *.xml.twig setlocal syntax=jinja
 "" syntax highlight for js.twig
 autocmd BufNewFile,BufRead  *.js.twig setlocal syntax=javascript
 "" syntax highlight for css.twig
 autocmd BufNewFile,BufRead  *.css.twig setlocal syntax=css
+
+" yaml
+
+autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType yml  setlocal ts=4 sts=4 sw=4 expandtab
+
 
 " rst
 autocmd BufNewFile,BufRead *.rst setlocal textwidth=80  colorcolumn=80  spell spelllang=en

@@ -106,7 +106,16 @@ Plug 'Xuyuanp/nerdtree-git-plugin'                                             "
 Plug 'vim-airline/vim-airline'                                                 " Advanced status bar
 
 " Syntax highlight
-Plug 'sheerun/vim-polyglot'
+Plug 'StanAngeloff/php.vim'
+Plug 'lepture/vim-jinja'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'amadeus/vim-xml'
+Plug 'stephpy/vim-yaml'
+Plug 'elzr/vim-json'
+Plug 'pboettch/vim-cmake-syntax'
+Plug 'pearofducks/ansible-vim'
+
 
 " Tools
 
