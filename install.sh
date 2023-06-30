@@ -1,5 +1,14 @@
 #!/usr/bin/env zsh
 
+if [ ! -d ~/.config/nvim ]; then
+  echo "Please install Neovim first"
+  exit 1
+fi
+
+if [ ! -f ~/.config/nvim/custom ]; then
+  ln -s ~/._./nvim ~/.config/nvim/custom
+fi
+
 # git
 
 git config --global core.eol lf
