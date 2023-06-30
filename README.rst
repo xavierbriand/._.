@@ -4,22 +4,22 @@
 
 Speed setup of my dev env on mac using:
 
+- `Oh my zsh <https://ohmyz.sh/>`
 - `neovim <https://neovim.io/>`
 
 
 How to use
 ==========
-#. Install `Homebrew <https://brew.sh/>`
+Install:
 
-#. Install neovim `brew install nvim`
+#. `Homebrew <https://brew.sh/>`
 
-#. Install ripgrep for Telescope: `brew install ripgrep`
+#. `Oh my zsh <https://ohmyz.sh/#install>`
 
-#. Install Nerd font: `brew tap homebrew/cask-fonts && brew install --cask font-hasklug-nerd-font`
+#. NeoVim `brew install nvim`
 
-#. Install NvChad: `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
+#. ripgrep for Telescope: `brew install ripgrep`
 
-#. Setup iTerm
+#. Nerd font: `brew tap homebrew/cask-fonts && brew install --cask font-hasklug-nerd-font`
 
-   - `Load colour profile <https://github.com/arcticicestudio/nord-iterm2#installation>`_
-
+#. `NvChad <https://nvchad.com/docs/quickstart/install>`
